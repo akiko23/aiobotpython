@@ -13,4 +13,4 @@ p2p = QiwiP2P(auth_key='eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9z
 
 dp = Dispatcher(bot, storage=MemoryStorage())
 
-db = Database("C:\\Users\\hdhrh\\Desktop\\pythonProject\\database.db")
+db = Database("database.db")

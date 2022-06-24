@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database.db" uuid="34ba3850-a2e7-41e2-a8d4-6cca86f13f0c">
+    <data-source source="LOCAL" name="database.db" uuid="fddf846e-ff6c-41b1-afc6-11e6ea300605">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/Desktop/pythonProject/database.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\hdhrh\PycharmProjects\AioBot\database.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

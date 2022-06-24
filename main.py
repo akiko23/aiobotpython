@@ -64,7 +64,6 @@ async def start_message(message: types.Message):
     else:
         await message.reply("test")
 
-
 @dp.message_handler(commands=['number'], state=None)
 async def get_number(mes: types.Message):
     await bot.send_message(mes.from_user.id, 'Отправьте номер вашего заказа')
@@ -87,7 +86,7 @@ async def get_mes_convert(mes: types.Message):
 
 
 @dp.message_handler(content_types=['text'])
-async def get_text(mes: types.Message):
+async def get_text(mes: types.Message, state: FSMContext):
     if mes.text == 'ПРОФИЛЬ':
         await bot.send_message(mes.from_user.id,
                            f'Количество ваших объявлений: {len(db.get_all_user_advertisements(mes.from_user.id))}',
@@ -104,6 +103,9 @@ async def get_text(mes: types.Message):
             await bot.send_message(mes.from_user.id,
                                    f'У вас уже есть подписка\n! Заканчивается через {time_sub_day(db.get_time_sub(mes.from_user.id))}')
 
+    elif mes.text == 'отмена':
+        await bot.send_message(mes.from_user.id, 'test')
+        await state.finish()
     else:
         try:
             convert_lst = mes.text.split(', ')
